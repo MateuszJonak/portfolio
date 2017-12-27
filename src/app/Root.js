@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import { Motion, spring } from 'react-motion';
 
-import Card from './components/Card';
-import CircleImage from './components/Circle-Image';
+import { Card } from './components/Card';
+import { CircleImage } from './components/CircleImage';
+import { SocialList } from './components/SocialList';
+import { Profile } from './components/Profile';
+
 import './Root.scss';
 
 class Root extends Component {
@@ -38,9 +41,8 @@ class Root extends Component {
                   transform: `perspective(1000px) rotateX(${rotateX}deg)`,
                 }}>
                 <CircleImage src="cv.jpg" />
-                <h1>Jonak Mateusz</h1>
-                <hr />
-                <h3>Full Stack JS Developer</h3>
+                <Profile />
+                <SocialList />
               </Card>
             )}
           </Motion>

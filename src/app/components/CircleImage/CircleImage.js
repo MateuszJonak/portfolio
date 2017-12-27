@@ -1,5 +1,5 @@
 import React from 'react';
-import './Circle-Image.scss';
+import './CircleImage.scss';
 
 const CircleImage = ({ src }) => {
   return <img src={src} className="circle-image" alt="Avatar" />;
