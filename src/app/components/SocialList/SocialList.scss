@@ -1,0 +1,38 @@
+@import '../../../styles/variables.scss';
+
+$icon-transition: 0.2s ease 0s;
+$colors-list: (
+  social-icon-github: #333,
+  social-icon-linkedin: #0077b5,
+  social-icon-pdf: #ff0000,
+);
+
+@mixin icon-color($color) {
+  border-color: $color;
+  .mdi-icon {
+    fill: $color;
+  }
+  &:hover {
+    background-color: $color;
+  }
+}
+
+.social-list {
+  .social-icon {
+    transition: background-color $icon-transition;
+    @each $selector, $color in $colors-list {
+      &.#{$selector} {
+        @include icon-color($color);
+      }
+    }
+
+    .mid-icon {
+      transition: fill $icon-transition;
+    }
+    &:hover {
+      .mdi-icon {
+        fill: white;
+      }
+    }
+  }
+}

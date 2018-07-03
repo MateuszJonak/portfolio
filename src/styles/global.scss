@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+@import '~normalize.css';
+@import './variables.scss';
 
 html {
   font-size: 18px;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
-  color: #313F47;
+  color: $gray-dark;
 }
 
 h1, h2, h3 {
@@ -42,4 +44,18 @@ body {
 
 *, *:before, *:after {
   box-sizing: border-box;
+}
+
+ul {
+  &.list-inline {
+    padding-left: 0;
+    list-style: none;
+
+    li {
+      display: inline-block;
+      &:not(:last-child) {
+        margin-right: 5px;
+      }
+    }
+  }
 }

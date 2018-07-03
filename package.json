@@ -1,8 +1,12 @@
 {
   "name": "portfolio",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "private": true,
   "dependencies": {
+    "classnames": "^2.2.6",
+    "mdi-react": "^4.0.0",
+    "normalize.css": "^7.0.0",
+    "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-motion": "^0.5.2"
@@ -16,14 +20,18 @@
     "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-prettier": "^2.4.0",
     "eslint-plugin-react": "^7.5.1",
+    "gh-pages": "^1.1.0",
     "mw-react-scripts": "1.0.17",
     "prettier": "^1.9.2"
   },
+  "homepage": "https://mateuszjonak.github.io/portfolio",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "prettier": {
     "singleQuote": true,
