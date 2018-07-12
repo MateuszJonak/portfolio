@@ -2,11 +2,11 @@ import React from 'react';
 
 import './Profile.scss';
 
-const Profile = () => (
+const Profile = ({ fullName, jobTitle }) => (
   <div>
-    <h1>Jonak Mateusz</h1>
+    <h1>{fullName}</h1>
     <hr />
-    <h3 className="job-title">Full Stack JS Developer</h3>
+    <h3 className="job-title">{jobTitle}</h3>
   </div>
 );
 
